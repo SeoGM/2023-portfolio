@@ -1,0 +1,67 @@
+@import url(reset.css);
+
+.section {display: flex; justify-content: center; align-items: center; min-height: 100vh;}
+.container {position: relative; max-width: 1200px; width: 100%; margin: 0 auto; padding: 7.5rem 15px;}
+.row {display: flex; flex-wrap: wrap; margin-left: -15px; margin-right: -15px;}
+.row > * {position: relative; width: 100%; padding-left: 15px; padding-right: 15px;}
+
+#intro {overflow: hidden; height: calc(100vh + 600px); background-color: #272828;}
+#intro::before {content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: -600px; background-image: url(../img/bg_intro1.png); transition: 3s all;}
+#intro::after {content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: -600px; background-image: url(../img/bg_intro2.png); transition: 3s all;}
+#intro .container {margin-top: -600px;}
+#intro .overlay {position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 10;; display: flex; justify-content: center; align-items: center; background-color: #fff; font-size: 6rem; font-weight: bold; color: #272828; text-align: center;}
+#intro .inner {position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; justify-content: center; align-items: center; font-size: 4rem; font-weight: bold; color: #fff; opacity: 0;}
+#intro .inner.fixed {position: absolute; top: 750px;}
+#intro .scroll {position: fixed; left: 0; right: 0; bottom: 50px; z-index: 10; display: flex; justify-content: center; align-items: center;}
+#intro .scroll span {position: relative; display: flex; flex-flow: column; font-weight: bold;}
+#intro .scroll span::after {content: ''; position: relative; margin: 0 auto; border: 20px solid transparent; border-top-color: #272828;}
+
+#profile .container {z-index: 10;}
+.annual-count {font-size: 7.5rem; font-weight: 900; line-height: 1; letter-spacing: -0.2em;}
+.annual-count sup {position: relative; vertical-align: super; top: -0.5em; font-size: 33.3%;}
+.subtext {font-size: 1.375rem; font-weight: 300; opacity: .4; letter-spacing: -0.05rem;}
+
+.profile-title {margin-bottom: 4.375rem; font-size: 2rem; font-weight: bold; word-break: keep-all;}
+
+.skill-title {margin-bottom: 0.9375em; font-size: 1.5rem; font-weight: 700; opacity: .65;}
+.skill-list {margin-bottom: 2.5rem;}
+.skill-list li {font-weight: 300; opacity: .8;}
+
+#career {background-color: #232931;}
+.career-title {margin-bottom: 3.125rem; font-size: 3.625rem; font-weight: 700; color: #fff;}
+.career-item {padding-bottom: 1.875rem;}
+.career-item + .career-item {padding-top: 1.875rem; border-top: 1px solid rgba(255, 255, 255, .25);}
+.career-date {font-size: 1rem; font-weight: 300; color: #fff; opacity: .6;}
+.career-calculator {font-size: 1rem; font-weight: 300; color: #fff; opacity: .4;}
+.career-subject {font-size: 1.375rem; font-weight: 700; color: #fff; word-break: keep-all;}
+.career-position {font-size: 1rem; font-weight: 300; color: #fff; opacity: .4;}
+.career-description {font-size: 1rem; color: #fff; opacity: .6;}
+
+@media (min-width: 768px) {
+    .col-lg-full {flex: 0 0 100%;}
+    .col-lg-half {flex: 0 0 50%;}
+    .col-lg-third-1 {flex: 0 0 33.333333%;}
+    .col-lg-third-2 {flex: 0 0 66.666667%;}
+    .col-lg-fourth-1 {flex: 0 0 25%;}
+    .col-lg-fifth-1 {flex: 0 0 20%;}
+    .col-lg-sixth-1 {flex: 0 0 16.666667%;}
+    .col-lg-sixth-5 {flex: 0 0 83.333333%;}
+
+    .lg-mg-left-1 {margin-left: 8.333333%;}
+
+}
+
+@media screen and (max-width: 767px) {
+    .container {max-width: 720px;}
+
+    .col-xs-hidden {display: none;}
+    .col-xs-full {flex: 0 0 100%;}
+
+    #intro .overlay {font-size: 2rem;}
+    #intro .inner {font-size: 2rem;}
+    #intro .scroll span::after {border-width: 10px;}
+
+    .career-calculator {margin-bottom: 0.625rem;}
+    .career-position {margin-bottom: 0.625rem;}
+    
+}
